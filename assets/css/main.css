@@ -2455,7 +2455,8 @@ section,
   margin-bottom: 4rem;
 }
 
-.call-to-action .services-grid .service-card {
+.call-to-action .services-grid .service-card,
+.why-choose-us .services-grid .service-card {
   background: var(--surface-color);
   padding: 3rem 2rem;
   border-radius: 12px;
