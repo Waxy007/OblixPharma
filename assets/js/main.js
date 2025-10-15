@@ -14,6 +14,17 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
+        
+        //Set active class on active link
+        var currentUrl = window.location.href;
+        var links = document.querySelectorAll('#navmenu a');
+        links.forEach(function(link) {
+          if (currentUrl.includes(link.href)) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
       });
 
     // Load footer
@@ -25,6 +36,8 @@
   }
 
   window.addEventListener("load", initHeaderAndFooter);
+
+  
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -193,6 +206,8 @@
       faqItem.parentNode.classList.toggle('faq-active');
     });
   });
+
+  
 
 
 })();
