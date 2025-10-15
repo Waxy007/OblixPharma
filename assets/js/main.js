@@ -9,33 +9,33 @@
 (function() {
   "use strict";
 
-  function initHeaderAndFooter(){
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
+  // function initHeaderAndFooter(){
+  //   fetch('header.html')
+  //     .then(response => response.text())
+  //     .then(data => {
+  //       document.getElementById('header').innerHTML = data;
         
-        //Set active class on active link
-        var currentUrl = window.location.href;
-        var links = document.querySelectorAll('#navmenu a');
-        links.forEach(function(link) {
-          if (currentUrl.includes(link.href)) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      });
+  //       //Set active class on active link
+  //       var currentUrl = window.location.href;
+  //       var links = document.querySelectorAll('#navmenu a');
+  //       links.forEach(function(link) {
+  //         if (currentUrl.includes(link.href)) {
+  //           link.classList.add('active');
+  //         } else {
+  //           link.classList.remove('active');
+  //         }
+  //       });
+  //     });
 
-    // Load footer
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  }
+  //   // Load footer
+  //   fetch('footer.html')
+  //     .then(response => response.text())
+  //     .then(data => {
+  //       document.getElementById('footer').innerHTML = data;
+  //     });
+  // }
 
-  window.addEventListener("load", initHeaderAndFooter);
+  // window.addEventListener("load", initHeaderAndFooter);
 
   
 
